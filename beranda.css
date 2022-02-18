@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/*navbar Awal*/
+
+body{
+    font-family: viga;
+    background-image: url(media/bg.jpg);
+    background-size: 50% ;
+    font-size: 20px;
+}
+
+.form-control{
+    font-size: 13px;
+}
+
+.nav-link:hover{
+    
+    size:30%;
+    color:blue;
+}
+.nav-link:hover::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid blue;
+    width: 50%;
+    margin: auto;
+    padding-bottom: -2px;
+    margin-bottom:-2px;
+}
+
+@media screen and (min-width: 995px){
+.d-flex{
+    width: 390px;
+}
+}
+
+@media screen and (max-width: 995px){
+    .navbar-nav{
+        text-align: center;
+    }
+    }
+/*navbar Akhir*/
+
+
+
+/*Awal Style beranda.html*/
+@media screen and (min-width: 995px){
+.carousel-item{
+    margin-left: 108px;
+}
+}
+/*Akhir Style beranda.html*/
+
+
+/*Awal Kategory*/
+.img-categori{
+ width: 50px;
+}
+
+.row-container{
+    background-color: #fff;
+    margin: 0px;
+}
+
+/*Akhir Kategory*/
+
+
+
+/*Awal Produk*/
+.card:hover{
+    border: 2px solid rgb(0, 0, 0);
+}
+
+/*Akhir Produk*/
