@@ -12,19 +12,19 @@
         <h2>Order Via WhatsApp</h2>  
         <form>  
          <div class="user-box">  
-          <input type="text" name="masukan nama" required="">  
-          <label>Username</label>  
+          <input type="text" name="Nama" required="">  
+          <label>Nama</label>  
          </div>  
          <div class="user-box">  
-          <input type="text" name="masukan wa" required="">  
+          <input type="text" name="Nomor" required="">  
           <label>Nomer WhatsApp</label>  
          </div>  
          <div class="user-box">  
-          <input type="text" name="masukan asal kota" required="">  
+          <input type="text" name="Askot" required="">  
           <label>Asal Kota</label>  
          </div>  
          <div class="contact100-form-btn submit">
-             <a href="https://wa.me/628979573100?text=Nama%3A%0ANo.%20HP%3A%0AAsalKota">  
+             <a onclick="customLink()">   
               <span></span>  
               <span></span>  
               <span></span>  
@@ -34,6 +34,33 @@
          </div>
         </form>  
        </div>  
-  <script src="pesan.js"></script>
+      
+    <!-- Dibawah ini Script source jQuerry pake CDN, wajib ada.
+         & kalo Offline, biasanya script gak jalan kecuali jQuerry nya Offline juga -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+
+    <!-- Dibawah ini script Custom buat dapetin data dari Form, pake Serialize Array & href ke API Whatsapp -->
+    <script>
+        function customLink(){
+            $(function() {
+                $(document).ready(function () {
+                    let values = {};
+
+                    $.each($("form").serializeArray(), function (i, field) {
+                        values[field.name] = field.value;
+                    });
+                
+                    let nama = values["Nama"];
+                    let nomor = values["Nomor"];
+                    let askot = values["Askot"];
+                
+                   window.open("https://wa.me/628979573100?text=" + "Nama: " + nama + "%0A" + "No.HP: " + nomor + "%0A" + "Asal Kota: " + askot);
+                });
+            })
+        }
+    </script>
+
+<script src="pesan.js"></script>
 </body>
 </html>
