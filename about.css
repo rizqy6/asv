@@ -328,7 +328,7 @@ from{
 } to{  
  -webkit-transform: rotateY(360deg);  
      transform: rotateY(360deg);  
-}  
+}  2
 }  
 @-webkit-keyframes spinRevert {  
 from{  
